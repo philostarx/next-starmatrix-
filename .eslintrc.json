@@ -1,4 +1,11 @@
 {
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript"
+  ],
   "plugins": ["tailwindcss"],
-  "extends": ["plugin:tailwindcss/recommended"]
+  "rules": {
+    "tailwindcss/no-custom-classname": "off",
+    "tailwindcss/classnames-order": "warn"
+  }
 }
