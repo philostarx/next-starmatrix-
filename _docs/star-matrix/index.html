@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart Matrix Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- ECharts 라이브러리 CDN 연결 -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 제목 섹션 -->
+        <header class="title-section">
+            <h1>START<br>CHART<br>MATRIX</h1>
+        </header>
+
+        <!-- 빅넘버(KPI) 섹션 -->
+        <div class="kpi-section">
+            <div class="kpi-label">CTR</div>
+            <div class="kpi-value">85%</div>
+        </div>
+
+        <!-- 테이블 섹션 -->
+        <div class="table-section">
+            <table id="data-table" class="data-table">
+                <!-- 테이블 내용은 JavaScript로 동적 생성 -->
+            </table>
+        </div>
+
+        <!-- 차트 섹션 -->
+        <div class="charts-section">
+            <div id="bar-chart" class="chart-container"></div>
+            <div id="line-chart" class="chart-container"></div>
+            <div id="pie-chart" class="chart-container"></div>
+        </div>
+    </div>
+
+    <!-- 자바스크립트 파일 연결 -->
+    <script src="js/data.js"></script>
+    <script src="js/chartOptions.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,10 @@
+.kpi-label {
+  font-size: 1rem; /* 기존 폰트 크기 유지 */
+  color: #666; /* 변경된 컬러 */
+}
+
+.kpi-value {
+  font-size: 2rem; /* 기존 폰트 크기 유지 */
+  font-weight: bold;
+  color: #666; /* 변경된 컬러 */
+} 

@@ -1,0 +1,63 @@
+# Next.js 차트 프로젝트 구조
+
+## 프로젝트 루트
+/next-charts-bar/
+├── node_modules/          # 설치된 npm 패키지들
+├── public/                # 정적 파일들
+│   └── data/              # 차트 데이터 JSON 파일들
+├── src/                   # 소스 코드
+│   ├── app/               # App Router
+│   │   ├── layout.tsx     # 공통 레이아웃
+│   │   ├── page.tsx       # 메인 페이지
+│   │   └── globals.css    # 글로벌 스타일
+│   ├── components/        # React 컴포넌트들
+│   │   └── charts/        # 차트 컴포넌트들
+│   │       ├── BaseChart.tsx          # 기본 차트 컴포넌트
+│   │       ├── SimpleBarChart.tsx     # 기본 막대 차트
+│   │       ├── GroupedBarChart.tsx    # 그룹형 막대 차트
+│   │       ├── StackedBarChart.tsx    # 스택형 막대 차트
+│   │       ├── HorizontalBarChart.tsx # 수평 막대 차트
+│   │       ├── HorizontalGroupedBarChart.tsx # 수평 그룹형 막대 차트
+│   │       └── HorizontalStackedBarChart.tsx # 수평 스택형 막대 차트
+│   ├── styles/            # CSS 모듈
+│   │   ├── Chart.module.css        # 차트 스타일
+│   │   └── Dashboard.module.css    # 대시보드 스타일
+│   ├── types/             # 타입 정의
+│   │   └── chart.types.ts # 차트 관련 타입 정의
+│   └── utils/             # 유틸리티 함수
+│       └── chartUtils.ts  # 차트 유틸리티 함수
+├── .gitignore             # Git 무시 파일
+├── next.config.js         # Next.js 설정 파일
+├── package.json           # 프로젝트 메타데이터 및 의존성
+├── tsconfig.json          # TypeScript 설정
+└── README.md              # 프로젝트 설명 파일
+
+## 주요 의존성
+- next: 13.x 이상
+- react: 18.x
+- typescript: 5.x
+- echarts: 5.x
+- echarts-for-react: 3.x
+
+## 실행 방법
+1. 개발 서버 실행:
+   npm run dev
+   또는
+   yarn dev
+
+2. 프로덕션 빌드:
+   npm run build
+   또는
+   yarn build
+
+3. 프로덕션 서버 실행:
+   npm run start
+   또는
+   yarn start
+
+## 프로젝트 특징
+- Next.js 13+ App Router 사용
+- TypeScript 기반
+- ECharts를 활용한 다양한 차트 구현
+- 모듈화된 CSS 스타일링
+- 반응형 디자인 지원

@@ -1,0 +1,79 @@
+# Next.js 스타 매트릭스 마이그레이션 작업 절차서
+
+## 1. 프로젝트 구조
+현재 위치: /Users/macmini-2018/CusorAI_ide/Nodejs/next-charts-bar/
+
+### 기존 구조
+/_docs/star-matrix/
+├── css
+│   └── styles.css
+├── index.html
+├── js
+│   ├── chartOptions.js
+│   ├── data.js
+│   └── main.js
+└── lib
+
+### 목표 구조
+/next-charts-bar/
+├── src/
+│   ├── components/
+│   │   └── charts/     # 차트 컴포넌트
+│   ├── pages/          # 라우팅
+│   └── styles/         # CSS 모듈
+├── public/
+│   └── data/          # 차트 데이터
+└── ... (기타 설정 파일)
+
+## 2. 작업 단계
+
+### 2.1 초기 설정
+- [ ] echarts, echarts-for-react 패키지 설치
+    ```bash
+    yarn add echarts echarts-for-react
+    ```
+
+### 2.2 파일 이동 및 구성
+- [ ] /docs/chart-bar/data/ → /public/data/ 이동
+- [ ] /docs/chart-bar/css/ → /src/styles/ 이동
+- [ ] /src/components/charts/ 디렉토리 생성
+
+### 2.3 컴포넌트 생성
+- [ ] BarChart.tsx
+- [ ] GroupedBarChart.tsx
+- [ ] StackedBarChart.tsx
+- [ ] HorizontalBarChart.tsx
+- [ ] index.tsx (메인 대시보드)
+
+### 2.4 스타일 마이그레이션
+- [ ] CSS 파일을 모듈화
+- [ ] 반응형 디자인 적용
+- [ ] 공통 스타일 분리
+
+### 2.5 데이터 처리
+- [ ] JSON 데이터 파일 설정
+- [ ] 데이터 로딩 로직 구현
+- [ ] API 라우트 구성 (필요시)
+
+### 2.6 최적화 및 테스트
+- [ ] 컴포넌트 렌더링 최적화
+- [ ] 반응형 테스트
+- [ ] 브라우저 호환성 테스트
+
+## 3. 주의사항
+1. 컴포넌트 변환 시 기존 ECharts 옵션 유지
+2. 반응형 디자인 깨지지 않도록 주의
+3. TypeScript 타입 정의 철저
+4. 성능 최적화 고려
+
+## 4. 예상 소요 시간
+- 초기 설정: 30분
+- 파일 이동 및 구성: 30분
+- 컴포넌트 생성: 2시간
+- 스타일 마이그레이션: 1시간
+- 데이터 처리: 1시간
+- 최적화 및 테스트: 1시간
+총 예상 시간: 6시간
+
+## 5. 백업
+작업 전 반드시 기존 코드 백업 

@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-white text-gray-700 font-sans;
+    line-height: 1.6;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto p-5 grid grid-cols-1 md:grid-cols-3 gap-5;
+  }
+
+  .title-section {
+    @apply bg-black text-white p-5 font-bold text-left;
+  }
+
+  .title-section h1 {
+    @apply text-4xl;
+    line-height: 1.2;
+  }
+
+  .kpi-section {
+    @apply flex flex-col justify-center items-center p-5 border border-gray-200 bg-white;
+  }
+
+  .kpi-label {
+    @apply text-2xl mb-2.5 text-gray-600;
+  }
+
+  .kpi-value {
+    @apply text-5xl font-bold text-gray-600;
+  }
+
+  .table-section {
+    @apply p-2.5 border border-gray-200 overflow-auto;
+  }
+
+  .data-table {
+    @apply w-full border-collapse text-sm text-gray-600;
+  }
+
+  .data-table th, 
+  .data-table td {
+    @apply p-2 text-left border-b border-gray-200;
+  }
+
+  .data-table th {
+    @apply hidden;
+  }
+
+  .data-table tr:last-child td {
+    @apply border-b-0;
+  }
+
+  .data-table tr:nth-child(even) {
+    @apply bg-gray-50;
+  }
+
+  .data-table tr:hover {
+    @apply bg-gray-100;
+  }
+
+  .data-table td:last-child {
+    @apply text-right;
+  }
+
+  .charts-section {
+    @apply col-span-1 md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-5 mt-5;
+  }
+
+  .chart-container {
+    @apply h-[300px] border border-gray-200 bg-white;
+  }
+}
